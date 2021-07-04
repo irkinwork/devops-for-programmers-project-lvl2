@@ -5,8 +5,12 @@
     - name: apt update cache and upgrade
       apt:
         upgrade: yes
-        update_cache: true
+        update_cache: True
         cache_valid_time: 3600
+
+  vars:
+      - pip_install_packages:
+        - name: docker
 
   roles:
     - geerlingguy.pip
