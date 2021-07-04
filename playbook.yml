@@ -1,6 +1,8 @@
+- import_playbook: preparing.yml
 - import_playbook: app.yml
 
 - hosts: webservers
+  tags: datadog
   vars:
     datadog_api_key: "{{ DATADOG_API_KEY }}"
     datadog_site: "datadoghq.eu"
