@@ -1,7 +1,6 @@
 ---
 - hosts: all
   become: yes
-  tags: app
 
   tasks:
     - name: Deploy app

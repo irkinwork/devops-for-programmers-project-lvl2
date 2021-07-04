@@ -1,11 +1,10 @@
 - hosts: all
   become: yes
-  tags: preparing
   pre_tasks:
     - name: apt update cache and upgrade
       apt:
         upgrade: yes
-        update_cache: True
+        update_cache: 'True'
         cache_valid_time: 3600
 
   vars:
